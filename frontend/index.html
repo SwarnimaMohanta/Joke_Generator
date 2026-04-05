@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>😂 JokeBot — AI Joke Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="bg-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+
+  <main class="container">
+    <header>
+      <div class="logo">😂</div>
+      <h1>JokeBot</h1>
+      <p class="subtitle">AI-powered jokes from 100,000+ Reddit gems</p>
+    </header>
+
+    <!-- Controls -->
+    <section class="controls">
+      <div class="control-group">
+        <label>Topic</label>
+        <div class="topic-pills" id="topicPills">
+          <button class="pill active" data-topic="random">🎲 Random</button>
+          <button class="pill" data-topic="animals">🐾 Animals</button>
+          <button class="pill" data-topic="food">🍕 Food</button>
+          <button class="pill" data-topic="technology">💻 Tech</button>
+          <button class="pill" data-topic="school">📚 School</button>
+          <button class="pill" data-topic="office">🏢 Office</button>
+          <button class="pill" data-topic="sports">⚽ Sports</button>
+          <button class="pill" data-topic="weather">🌦️ Weather</button>
+        </div>
+      </div>
+
+      <div class="control-row">
+        <div class="control-group">
+          <label>Mode</label>
+          <select id="modeSelect">
+            <option value="mixed">🔀 Mixed (AI + Reddit)</option>
+            <option value="ai">🤖 AI Generated</option>
+            <option value="reddit">📰 Reddit Classics</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Count</label>
+          <select id="countSelect">
+            <option value="3" selected>3 jokes</option>
+            <option value="4">4 jokes</option>
+            <option value="5">5 jokes</option>
+            <option value="6">6 jokes</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-generate" id="generateBtn" onclick="fetchJokes()">
+        <span class="btn-icon">⚡</span>
+        <span class="btn-text">Generate Jokes!</span>
+      </button>
+    </section>
+
+    <!-- Joke Cards -->
+    <section class="jokes-section" id="jokesSection">
+      <div class="placeholder">
+        <div class="placeholder-emoji">🎭</div>
+        <p>Click <strong>Generate Jokes</strong> to get started!</p>
+      </div>
+    </section>
+
+    <!-- Stats bar -->
+    <div class="stats-bar" id="statsBar" style="display:none">
+      <span id="statsText"></span>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

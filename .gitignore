@@ -1,0 +1,5 @@
+echo "jokevenv/
+backend/data/
+backend/.env
+__pycache__/
+*.pyc" > .gitignore
